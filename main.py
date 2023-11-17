@@ -48,7 +48,7 @@ for msg in filtered_messages:
         importance = "Medium"
 
     if "Technology" in msg.CC or "Technology" in msg.To:
-        if "RE:" not in msg.Subject:
+        if "RE:" not in msg.Subject and "Deployed" not in msg.Subject:
             row_values = [None] * len(headers)
 
             for header in headers:
